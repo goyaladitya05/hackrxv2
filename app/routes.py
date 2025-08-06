@@ -27,3 +27,7 @@ async def health_check():
 @router.get("/hackrx/run")
 async def health_check():
     return JSONResponse(content={"status": "ok", "message": "Send a POST request. GET not allowed on this route"})
+
+@router.get("/")
+def read_root():
+    return {"message": "Hello from FastAPI + Docker on Hugging Face Spaces!"}
